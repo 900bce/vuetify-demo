@@ -1,8 +1,8 @@
 <template>
   <v-app>
-    <sidebar></sidebar>
+    <sidebar :drawer="drawer"></sidebar>
 
-    <navbar></navbar>
+    <navbar @toggle-drawer="toggleDrawer"></navbar>
 
     <!-- Sizes your content based upon application components -->
     <v-content>
@@ -27,5 +27,11 @@ import Navbar from 'Components/layout/navbar.vue';
     Navbar,
   },
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  drawer = false;
+
+  toggleDrawer() {
+    this.drawer = !this.drawer;
+  }
+}
 </script>
