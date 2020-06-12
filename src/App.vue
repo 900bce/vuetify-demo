@@ -28,7 +28,7 @@ import Navbar from 'Components/layout/navbar.vue';
   },
 })
 export default class App extends Vue {
-  drawer = false;
+  drawer = true;
 
   toggleDrawer() {
     this.drawer = !this.drawer;
